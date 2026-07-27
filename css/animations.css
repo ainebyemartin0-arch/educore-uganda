@@ -1,0 +1,149 @@
+/* ============================================================
+   EDU-CORE UGANDA — ANIMATION KEYFRAMES
+   ============================================================ */
+
+/* Pulse for notifications */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--color-primary-glow);
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Spin for loading indicators */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Shake for error states */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 90% { transform: translateX(-2px); }
+  30%, 70% { transform: translateX(2px); }
+  50%      { transform: translateX(-1px); }
+}
+
+.shake {
+  animation: shake 400ms var(--ease-symmetric);
+}
+
+/* Slide up for bottom sheets */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slide-up 400ms var(--ease-expo-out);
+}
+
+/* Fade in */
+@keyframes fade-in-only {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fade-in {
+  animation: fade-in-only 300ms var(--ease-symmetric);
+}
+
+/* Scale in */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scale-in {
+  animation: scale-in 250ms var(--ease-spring);
+}
+
+/* Number counter animation (used with JS) */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Progress bar fill */
+@keyframes progress-fill {
+  from { width: 0%; }
+}
+
+.progress-fill {
+  animation: progress-fill 800ms var(--ease-expo-out);
+}
+
+/* Gradient background animation for hero sections */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Status dot pulse */
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.online  { background: var(--color-success); animation: status-pulse 2s infinite; }
+.status-dot.offline { background: var(--text-muted); }
+.status-dot.warning { background: var(--color-warning); }
+
+/* Skeleton pulse fallback */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+.skeleton-pulse {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .pulse-glow,
+  .spin,
+  .shake,
+  .slide-up,
+  .fade-in,
+  .scale-in,
+  .progress-fill,
+  .status-dot,
+  .skeleton-pulse {
+    animation: none !important;
+  }
+  
+  .shimmer::after {
+    display: none;
+  }
+}

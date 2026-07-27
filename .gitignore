@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+bower_components/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+
+# Database
+*.sqlite3
+*.db
+
+# Uploads (keep folder structure)
+uploads/*
+!uploads/.gitkeep
