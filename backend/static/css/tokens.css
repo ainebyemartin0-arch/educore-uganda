@@ -1,0 +1,150 @@
+/* ============================================================
+   EDU-CORE UGANDA — DESIGN TOKENS
+   All values centralized for consistency
+   ============================================================ */
+
+:root {
+  /* ===== TYPOGRAPHY ===== */
+  --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 
+                   'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, 
+               'Courier New', monospace;
+
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 1.875rem;    /* 30px */
+  --text-4xl: 2.25rem;     /* 36px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.02em;
+
+  /* ===== COLORS: BACKGROUND ===== */
+  --bg-deep: #0A0E14;
+  --bg-surface: #131820;
+  --bg-surface-elevated: #1A212D;
+  --bg-surface-hover: #1E2633;
+
+  /* ===== COLORS: GLASS ===== */
+  --glass-bg: rgba(19, 24, 32, 0.65);
+  --glass-bg-strong: rgba(19, 24, 32, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border-hover: rgba(255, 255, 255, 0.10);
+  --glass-blur: blur(16px);
+  --glass-blur-heavy: blur(24px);
+
+  /* ===== COLORS: PRIMARY ===== */
+  --color-primary: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-primary-active: #1D4ED8;
+  --color-primary-muted: rgba(59, 130, 246, 0.15);
+  --color-primary-glow: rgba(59, 130, 246, 0.25);
+
+  /* ===== COLORS: SEMANTIC ===== */
+  --color-success: #10B981;
+  --color-success-muted: rgba(16, 185, 129, 0.15);
+  --color-warning: #F59E0B;
+  --color-warning-muted: rgba(245, 158, 11, 0.15);
+  --color-danger: #EF4444;
+  --color-danger-muted: rgba(239, 68, 68, 0.15);
+  --color-info: #06B6D4;
+  --color-info-muted: rgba(6, 182, 212, 0.15);
+
+  /* ===== COLORS: TEXT ===== */
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-inverse: #0A0E14;
+  --text-link: #60A5FA;
+
+  /* ===== COLORS: BORDERS ===== */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-primary: rgba(59, 130, 246, 0.40);
+
+  /* ===== BORDER RADIUS ===== */
+  --radius-none: 0;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* ===== SPACING (8px base grid) ===== */
+  --space-0: 0;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-8: 96px;
+  --space-10: 128px;
+
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.40);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.30), 
+               0 2px 4px rgba(0, 0, 0, 0.20);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.40), 
+               0 4px 10px rgba(0, 0, 0, 0.30);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.50);
+  --shadow-glow-primary: 0 0 20px rgba(59, 130, 246, 0.15);
+  --shadow-glow-success: 0 0 20px rgba(16, 185, 129, 0.15);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.40),
+                 0 1px 2px rgba(0, 0, 0, 0.20);
+
+  /* ===== ANIMATION CURVES ===== */
+  --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-expo-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-symmetric: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ===== ANIMATION DURATIONS ===== */
+  --duration-instant: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-entrance: 500ms;
+
+  /* ===== Z-INDEX ===== */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* ===== LAYOUT ===== */
+  --sidebar-width: 280px;
+  --sidebar-collapsed: 72px;
+  --header-height: 64px;
+  --content-max-width: 1440px;
+  --content-narrow: 680px;
+}
+
+/* ===== DENSITY VARIANTS ===== */
+[data-density="compact"] {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+[data-density="comfortable"] {
+  /* Default values already set */
+}
